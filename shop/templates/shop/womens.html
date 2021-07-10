@@ -52,25 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h1><a href="{% url 'index' %}"><img src="{% static 'shop/images/logo3.jpg' %}"></a></h1>
 		</div>
 		<div class="col-md-6 header-middle">
-			<form>
-				<div class="search">
-					<input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
-				</div>
-				<div class="section_room">
-					<select id="country" onchange="change_country(this.value)" class="frm-field required">
-						<option value="null">All categories</option>
-						<option value="null">Electronics</option>     
-						<option value="AX">kids Wear</option>
-						<option value="AX">Men's Wear</option>
-						<option value="AX">Women's Wear</option>
-						<option value="AX">Watches</option>
-					</select>
-				</div>
-				<div class="sear-sub">
-					<input type="submit" value=" ">
-				</div>
-				<div class="clearfix"></div>
-			</form>
+			
 		</div>
 		<div class="col-md-3 header-right footer-bottom">
 			<ul>
@@ -104,72 +86,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
 					<li class="active menu__item "><a class="menu__link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a></li>
-					<li class="dropdown menu__item ">
-						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">men's wear <span class="caret"></span></a>
-							<ul class="dropdown-menu multi-column columns-3">
-								<div class="row">
-									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-										<a href="{% url 'mens' %}"><img src="{% static 'shop/images/woo1.jpg' %}" alt=" "/></a>
-									</div>
-									<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-											<li><a href="{% url 'mens' %}">Clothing</a></li>
-											<li><a href="{% url 'mens' %}">Wallets</a></li>
-											<li><a href="{% url 'mens' %}">Footwear</a></li>
-											<li><a href="{% url 'mens' %}">Watches</a></li>
-											<li><a href="{% url 'mens' %}">Accessories</a></li>
-											<li><a href="{% url 'mens' %}">Bags</a></li>
-											<li><a href="{% url 'mens' %}">Caps & Hats</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-											<li><a href="{% url 'mens' %}">Jewellery</a></li>
-											<li><a href="{% url 'mens' %}">Sunglasses</a></li>
-											<li><a href="{% url 'mens' %}">Perfumes</a></li>
-											<li><a href="{% url 'mens' %}">Beauty</a></li>
-											<li><a href="{% url 'mens' %}">Shirts</a></li>
-											<li><a href="{% url 'mens' %}">Sunglasses</a></li>
-											<li><a href="{% url 'mens' %}">Swimwear</a></li>
-										</ul>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</ul>
-					</li>
-					<li class="dropdown menu__item menu__item--current">
-						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">women's wear <span class="caret"></span></a>
-							<ul class="dropdown-menu multi-column columns-3">
-								<div class="row">
-									<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-											<li><a href="{% url 'womens' %}">Clothing</a></li>
-											<li><a href="{% url 'womens' %}">Wallets</a></li>
-											<li><a href="{% url 'womens' %}">Footwear</a></li>
-											<li><a href="{% url 'womens' %}">Watches</a></li>
-											<li><a href="{% url 'womens' %}">Accessories</a></li>
-											<li><a href="{% url 'womens' %}">Bags</a></li>
-											<li><a href="{% url 'womens' %}">Caps & Hats</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-3 multi-gd-img">
-										<ul class="multi-column-dropdown">
-											<li><a href="{% url 'womens' %}">Jewellery</a></li>
-											<li><a href="{% url 'womens' %}">Sunglasses</a></li>
-											<li><a href="{% url 'womens' %}">Perfumes</a></li>
-											<li><a href="{% url 'womens' %}">Beauty</a></li>
-											<li><a href="{% url 'womens' %}">Shirts</a></li>
-											<li><a href="{% url 'womens' %}">Sunglasses</a></li>
-											<li><a href="{% url 'womens' %}">Swimwear</a></li>
-										</ul>
-									</div>
-									<div class="col-sm-6 multi-gd-img multi-gd-text ">
-										<a href="{% url 'womens' %}"><img src="{% static 'shop/images/woo.jpg' %}" alt=" "/></a>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-							</ul>
-					</li>
+					<li class=" menu_item"><a class="menu_link" href="{% url 'mens' %}">Mens</a></li>
+					<li class=" menu_item"><a class="menu_link" href="{% url 'womens' %}">Womens</a></li>
 					<li class=" menu__item"><a class="menu__link" href="{% url 'electronics' %}">Electronics</a></li>
 					
 					<li class=" menu__item "><a class="menu__link" href="{% url 'contact' %}">Contact</a></li>
@@ -208,160 +126,58 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="men-wear">
 	<div class="container">
 		<div class="col-md-4 products-left">
-			<div class="filter-price">
-				<h3>Filter By Price</h3>
-					<ul class="dropdown-menu6">
-						<li>                
-							<div id="slider-range"></div>							
-							<input type="text" id="amount" style="border: 0; color: #ffffff; font-weight: normal;" />
-						</li>			
-					</ul>
-							<!---->
-							<script type='text/javascript'>//<![CDATA[ 
-							$(window).load(function(){
-							 $( "#slider-range" ).slider({
-										range: true,
-										min: 0,
-										max: 9000,
-										values: [ 1000, 7000 ],
-										slide: function( event, ui ) {  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-										}
-							 });
-							$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-
-							});//]]>  
-
-							</script>
-						<script type="text/javascript" src="{% static 'shop/js/jquery-ui.js' %}"></script>
-					 <!---->
-			</div>
+			
 			<div class="css-treeview">
 				<h4>Categories</h4>
 				<ul class="tree-list-pad">
 					<li><input type="checkbox" checked="checked" id="item-0" /><label for="item-0"><span></span>Women's Wear</label>
 						<ul>
-							<li><input type="checkbox" id="item-0-0" /><label for="item-0-0">Ethinic Wear</label>
 								<ul>
-									<li><a href="{% url 'womens' %}">Sarees</a></li>
-									<li><a href="{% url 'womens' %}">Chudidars</a></li>
-									<li><a href="{% url 'womens' %}">Wedges</a></li>
-									<li><a href="{% url 'womens' %}">Tops</a></li>
-									<li><a href="{% url 'womens' %}">Perfumes</a></li>
-									<li><a href="{% url 'womens' %}">Caps</a></li>
+									<li><label>Tops</label></li>
+									<li><label>T Shirts</label></li>
+									<li><label>Sandals</label></li>
+									<li><label>Hand Bags</label></li>
 								</ul>
-							</li>
-							<li><input type="checkbox"  id="item-0-1" /><label for="item-0-1">Party Wear</label>
-								<ul>
-									<li><a href="{% url 'womens' %}">Sarees</a></li>
-									<li><a href="{% url 'womens' %}">Chudidars</a></li>
-									<li><a href="{% url 'womens' %}">Wedges</a></li>
-									<li><a href="{% url 'womens' %}">Tops</a></li>
-									<li><a href="{% url 'womens' %}">Perfumes</a></li>
-									<li><a href="{% url 'womens' %}">Caps</a></li>
-								</ul>
-							</li>
-							<li><input type="checkbox"  id="item-0-2" /><label for="item-0-2">Casual Wear</label>
-								<ul>
-									<li><a href="{% url 'womens' %}">Sarees</a></li>
-									<li><a href="{% url 'womens' %}">Chudidars</a></li>
-									<li><a href="{% url 'womens' %}">Wedges</a></li>
-									<li><a href="{% url 'womens' %}">Tops</a></li>
-									<li><a href="{% url 'womens' %}">Perfumes</a></li>
-									<li><a href="{% url 'womens' %}">Caps</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li><input type="checkbox" id="item-1" checked="checked" /><label for="item-1">Best Collections</label>
-						<ul>
-							<li><input type="checkbox" checked="checked" id="item-1-0" /><label for="item-1-0">New Arrivals</label>
-								<ul>
-									
-									<li><a href="{% url 'womens' %}">Wedges</a></li>
-									<li><a href="{% url 'womens' %}">Tops</a></li>
-									<li><a href="{% url 'womens' %}">Perfumes</a></li>
-									<li><a href="{% url 'womens' %}">Caps</a></li>
-								</ul>
-							</li>
+							
 							
 						</ul>
 					</li>
+					
 					<li><input type="checkbox" checked="checked" id="item-2" /><label for="item-2">Best Offers</label>
 						<ul>
 							<li><input type="checkbox"  id="item-2-0" /><label for="item-2-0">Summer Discount Sales</label>
 								<ul>
-									<li><a href="{% url 'womens' %}">Wedges</a></li>
-									<li><a href="{% url 'womens' %}">Tops</a></li>
-									<li><a href="{% url 'womens' %}">Perfumes</a></li>
-									<li><a href="{% url 'womens' %}">Caps</a></li>
+									<li><label>Tops</label></li>
+									<li><label>T Shirts</label></li>
+									<li><label>Sandals</label></li>
+									<li><label>Hand Bags</label></li>
 								</ul>
 							</li>
 							<li><input type="checkbox" id="item-2-1" /><label for="item-2-1">Exciting Offers</label>
 								<ul>
-									<li><a href="{% url 'womens' %}">Wedges</a></li>
-									<li><a href="{% url 'womens' %}">Tops</a></li>
-									<li><a href="{% url 'womens' %}">Perfumes</a></li>
-									<li><a href="{% url 'womens' %}">Caps</a></li>
+									<li><label>Tops</label></li>
+									<li><label>T Shirts</label></li>
+									<li><label>Sandals</label></li>
+									<li><label>Hand Bags</label></li>
 								</ul>
 							</li>
 							<li><input type="checkbox" id="item-2-2" /><label for="item-2-2">Flat Discounts</label>
 								<ul>
-									<li><a href="{% url 'womens' %}">Wedges</a></li>
-									<li><a href="{% url 'womens' %}">Tops</a></li>
-									<li><a href="{% url 'womens' %}">Perfumes</a></li>
-									<li><a href="{% url 'womens' %}">Caps</a></li>
+									<li><label>Tops</label></li>
+									<li><label>T Shirts</label></li>
+									<li><label>Sandals</label></li>
+									<li><label>Hand Bags</label></li>
 								</ul>
 							</li>
 						</ul>
 					</li>
 				</ul>
 			</div>
-			<div class="community-poll">
-				<h4>Community Poll</h4>
-				<div class="swit form">	
-					<form>
-					<div class="check_box"> <div class="radio"> <label><input type="radio" name="radio" checked=""><i></i>More convenient for shipping and delivery</label> </div></div>
-					<div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Lower Price</label> </div></div>
-					<div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Track your item</label> </div></div>
-					<div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Bigger Choice</label> </div></div>
-					<div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>More colors to choose</label> </div></div>	
-					<div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Secured Payment</label> </div></div>
-					<div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Money back guaranteed</label> </div></div>	
-					<div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Others</label> </div></div>		
-					<input type="submit" value="SEND">
-					</form>
-				</div>
-			</div>
+			
 			<div class="clearfix"></div>
 		</div>
 		<div class="col-md-8 products-right">
-			<h5>Product Compare(0)</h5>
-			<div class="sort-grid">
-				<div class="sorting">
-					<h6>Sort By</h6>
-					<select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-						<option value="null">Default</option>
-						<option value="null">Name(A - Z)</option> 
-						<option value="null">Name(Z - A)</option>
-						<option value="null">Price(High - Low)</option>
-						<option value="null">Price(Low - High)</option>	
-						<option value="null">Model(A - Z)</option>
-						<option value="null">Model(Z - A)</option>					
-					</select>
-					<div class="clearfix"></div>
-				</div>
-				<div class="sorting">
-					<h6>Showing</h6>
-					<select id="country2" onchange="change_country(this.value)" class="frm-field required sect">
-						<option value="null">7</option>
-						<option value="null">14</option> 
-						<option value="null">28</option>					
-						<option value="null">35</option>								
-					</select>
-					<div class="clearfix"></div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
+			
 			<div class="men-wear-top">
 				<script src="{% static 'shop/js/responsiveslides.min.js' %}"></script>
 				<script>
@@ -489,21 +305,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<div class="col-md-3 footer-left">
 			<h2><a href="{% url 'index' %}"><img src="{% static 'shop/images/logo3.jpg' %}" alt=" " /></a></h2>
-			<p>Neque porro quisquam est, qui dolorem ipsum quia dolor
-			sit amet, consectetur, adipisci velit, sed quia non 
-			numquam eius modi tempora incidunt ut labore 
-			et dolore magnam aliquam quaerat voluptatem.</p>
+			<p>Smart Shop does not only sell clothing but also shoes. It covers a wide range of fashion items. The site offers a customer service number, which means it’s priority is customer satisfaction.</p>
 		</div>
 		<div class="col-md-9 footer-right">
-			<div class="col-sm-6 newsleft">
-				<h3>SIGN UP FOR NEWSLETTER !</h3>
-			</div>
-			<div class="col-sm-6 newsright">
-				<form>
-					<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-					<input type="submit" value="Submit">
-				</form>
-			</div>
+			
 			<div class="clearfix"></div>
 			<div class="sign-grds">
 				<div class="col-md-4 sign-gd">
@@ -515,6 +320,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="{% url 'electronics' %}">Electronics</a></li>
 						
 						<li><a href="{% url 'contact' %}">Contact</a></li>
+						<li><a href="{% url 'profile' %}">Profile</a></li>
 					</ul>
 				</div>
 				{% for data in H %}
@@ -545,7 +351,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<div class="clearfix"></div>
-		<p class="copy-right">&copy 2016 Smart Shop. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 	</div>
 </div>
 <!-- //footer -->
