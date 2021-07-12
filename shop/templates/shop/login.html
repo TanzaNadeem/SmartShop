@@ -49,7 +49,7 @@
 							{{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}}</small> <br>
 							</div>
 							{% endfor %}
-							<small><a href="{% url 'index' %}">Forgot Password ? </a></small><br>
+							<small><a href="{% url 'password_reset' %}">Forgot Password ? </a></small><br>
 							<input type="submit" class="btn
 							btn-primary  mt-4" value="Sign In">
 							<br>
@@ -67,7 +67,6 @@
 									
 									<div class="clearfix"></div>
 								</div>
-								<p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
 							</div>
 						</div>
 					</div>
