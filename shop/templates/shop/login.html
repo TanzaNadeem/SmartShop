@@ -33,9 +33,7 @@
    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content modal-info">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-						</div>
+						
 						<div class="modal-body modal-spa">
 							<div class="login-grids">
 								<div class="login">
@@ -55,13 +53,15 @@
 							<br>
 							<div class="text-center text-primary
 							 fw-bold"><small>New to Shopping ? <a href="{% url 'index' %} 
-							 " class="text-danger">Create an Account </a> </small></div>
+							 " class="text-danger">Create an Account by SignUp </a> </small></div>
 							 {% if form.non_field_errors %}
 							  {% for error in form.non_field_errors %}
 							    <p class="alert alert-danger my-3">{{error}}</p>
 							  {% endfor %}
 							 {% endif %}	
-
+                             <div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
+					<a href="{% url 'index' %}"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Close</a>
+				</div>
 							</form>
 									</div>
 									
