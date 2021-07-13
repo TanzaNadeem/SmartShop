@@ -390,4 +390,4 @@ def reset(request):
             return redirect('password_reset')
     return render(request, 'shop/index.html', {'form': form}) 
 def order_complete(request):
-    return render(request,'brand/order_complete.html')                  
+    return render(request,'shop/order_complete.html')                  
